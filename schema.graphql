@@ -1,0 +1,22 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Instrument {
+  name: String!
+  digits: Int!
+}
+
+type Query {
+  getAll: [Instrument!]
+}
+
+type Mutation {
+  updateInstrument(instrument: InstrumentInput!): Instrument!
+}
+
+input InstrumentInput {
+  name: String!
+  digits: Int!
+}
